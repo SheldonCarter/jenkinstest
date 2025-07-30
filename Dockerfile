@@ -1,8 +1,13 @@
-# Use the official Python base image
-FROM python:3.11-slim
-# Set the working directory inside the container
+FROM icr.io/ibmz/python:3.10.6
+
+# Set the working directory in the container
 WORKDIR /app
-# Create a simple Python script
-COPY hello.py .
-# Run the script
-CMD ["python", "hello.py"]
+
+# Install any needed packages specified in requirements.txt
+RUN pip install pymongo
+
+# Copy the rest of the application code into the container
+COPY hello_world.py .
+
+# Run the application
+CMD ["python", "hello_world.py"]

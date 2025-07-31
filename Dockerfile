@@ -9,5 +9,6 @@ RUN pip install pymongo
 # Copy the rest of the application code into the container
 COPY hello_world.py .
 
+RUN ls -la
 # Run the application
 CMD ["python", "hello_world.py"]

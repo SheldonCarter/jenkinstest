@@ -6,7 +6,7 @@ WORKDIR /app
 # Install any needed packages specified in requirements.txt
 RUN pip install pymongo
 
-RUN ls -la
+RUN echo ls -la
 
 # Copy the rest of the application code into the container
 COPY hello_world.py .

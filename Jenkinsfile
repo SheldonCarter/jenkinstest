@@ -10,7 +10,7 @@ pipeline {
     
         stage('Build image') {
             steps {
-                sh 'su docker build . -t jenkins-hello'
+                sh 'docker build . -t jenkins-hello'
             }
         }
     }

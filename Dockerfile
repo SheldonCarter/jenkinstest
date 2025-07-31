@@ -10,4 +10,4 @@ RUN pip install pymongo
 COPY hello.py .
 
 # Run the application
-CMD ["python", "hello_world.py"]
+CMD ["python", "hello.py"]
